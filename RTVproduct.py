@@ -39,7 +39,7 @@ class Store:
             rl.append(x.ship_To_Rlc_Flg)
             return rl
         
-        2
+        
 if __name__ == "__main__":
     count=int(input())
     l=[]
