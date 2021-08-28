@@ -1,0 +1,37 @@
+SWAPING STRINGS IN JAVA
+
+	class Swaping 
+		{     
+		    public static void main(String args[]) 
+    			{ 
+        			String a = "Hello"; 
+        			String b = "World"; 
+        			System.out.println("Strings before swap: a = " + a + " and b = "+b); 
+    
+        			a = a + b; 
+        			b = a.substring(0,a.length()-b.length());
+ 				a = a.substring(b.length()); 
+        
+        			System.out.println("Strings after swap: a = " + a + " and b = " + b);         
+    			}     
+		} 
+
+
+SWAPPING char IN C
+
+	void swap(char *a,char *b)
+		{
+    			*a=*a+*b;
+    			*b=*a-*b;
+    			*a=*a-*b;
+		}
+    
+SWAPPING in Python
+  a,b=b,a
+  
+  
+LOGIC FOR SWAPPING INTEGER VALUES WITHOUT THIRD VARIABLE IN ANY lang.
+
+	a=a+b;
+	b=a-b;
+	a=a-b;
