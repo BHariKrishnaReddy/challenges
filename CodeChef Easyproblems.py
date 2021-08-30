@@ -30,3 +30,17 @@ for i in range(1,n+1):
 print(c)
 for i in fl:
   print(i,end=" ")
+
+
+#SECLAR
+a,b,c=int(input()),int(input()),int(input())
+if a>b or a>c:
+    if a>b and a>c:
+        print(b)
+    else:
+        print(c)
+else:
+    if b>c:
+        print(c)
+    else:
+        print(b)
