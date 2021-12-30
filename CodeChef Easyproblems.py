@@ -61,3 +61,12 @@ n,s=int(input()),list(map(int,input().split()))
 a=s[::-1]
 for i in a:
     print(i,end=" ")
+    
+    
+#find me
+n,k=map(int,input().split(" "))
+l = list(map(int,input().split()))
+if k in l:
+    print(1)
+else:
+    print(-1)
