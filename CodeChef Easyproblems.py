@@ -53,3 +53,11 @@ if c>b and c>a:
         print(b)
     else:
         print(a)
+
+        
+        
+#reverseMe        
+n,s=int(input()),list(map(int,input().split()))
+a=s[::-1]
+for i in a:
+    print(i,end=" ")
