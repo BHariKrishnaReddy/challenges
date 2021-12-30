@@ -33,14 +33,23 @@ for i in fl:
 
 
 #SECLAR
+# cook your dish here
 a,b,c=int(input()),int(input()),int(input())
-if a>b or a>c:
-    if a>b and a>c:
+
+if a>b and a>c:
+    if b>c :
         print(b)
     else:
         print(c)
-else:
-    if b>c:
-        print(c)
+
+if b>a and b>c:
+    if a>c :
+        print(a)
     else:
+        print(c)
+
+if c>b and c>a:
+    if b>a :
         print(b)
+    else:
+        print(a)
