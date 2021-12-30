@@ -70,3 +70,23 @@ if k in l:
     print(1)
 else:
     print(-1)
+    
+    
+    
+#Valid Triangle or not
+a,b,c=map(int,input().split(" "))
+if a+b>c and a+c>b and b+c>a:
+    print("YES")
+else:
+    print("NO")
+    
+    
+    
+#Reverse Star Pattern
+n = int(input())
+for i in range(1,n+1):
+    if n-i == 0:
+        print("*"*i)
+    else:
+        print(" "*(n-i-1),"*"*i)
+    
