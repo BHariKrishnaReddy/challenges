@@ -20,33 +20,30 @@ Output: [8,9,9,9,0,0,0,1]
 #         self.next = next
 class Solution:
     def addTwoNumbers(self, l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:
-        if l1 is None and l2 is None:
-            return 
-        if l2 is None:
-            return l1
-        if l1 is None:
-            return l2
-        n1,n2 = l1,l2
-        s1,s2="",""
-        size = 0
-        while n1 is not None:
-            s1+=str(n1.value)
-            n1 = n1.next
-        while n2 is not None:
-            s2+=str(n2.value)
-            n2 = n2.next
-            
-        final = [int(i) for i in str( int( str1[::-1] )+int( str2[::-1] ) )[::-1]]
-        new_node = l1
-        for i in final:
-            size+=1
-            new_node.val = i
-            if new_node.next is None:
-                break
-            new_node = new_node.next
-        diff = len(final)-size
-        while len(final)-size>0:
-            new_node.next = ListNode(final[size])
-            new_node = new_node.next
-            size+=1
- 
+        # Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+class Solution:
+    def addTwoNumbers(self, l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:
+        carry_over = 0
+        out = ListNode(None)
+        start = out
+
+        while(l1 is not None or l2 is not None or carry_over != 0):
+
+            if(l1 is not None):
+                carry_over += l1.val
+                l1 = l1.next
+            if(l2 is not None):
+                carry_over += l2.val
+                l2 = l2.next                
+            digit = carry_over % 10
+            carry_over //= 10 
+            out.val = digit
+            out.next = ListNode(None)
+            prev = out
+            out = out.next
+        prev.next = None
+        return start
